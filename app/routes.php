@@ -17,7 +17,7 @@ Route::get('/', function()
 	return View::make('hello');
 });
 */
-Route::get('/', array('as' => 'Acceso', 'uses' => 'IndiceController@Acceso'));
+//Route::get('/', array('as' => 'Acceso', 'uses' => 'IndiceController@Acceso'));
 
 Route::get('/', array('as' => 'OlvidarContrasenha', 'uses' => 'IndiceController@Acceso'));
 //Route::get('/', array('as' => 'RegistrarUsuario', 'uses' => 'IndiceController@Acceso'));
@@ -25,5 +25,7 @@ Route::get('/', array('as' => 'OlvidarContrasenha', 'uses' => 'IndiceController@
 //Route::match(array('GET', 'POST'), 'Usuario/Editar/{id_usuario}/', array('as' => 'UsuarioEditar', 'uses' => 'UsuarioController@UsuarioEditar'));
 
 //Route::post('Usuario/Eliminar/{id_usuario}/', array('as' => 'UsuarioEliminar', 'uses' => 'UsuarioController@UsuarioEliminar'));
+
+Route::match(array('GET', 'POST'), 'Acceso/', array('as' => 'Acceso', 'uses' => 'IndiceController@Acceso'));
 
 Route::match(array('GET', 'POST'), 'Usuario/Registrar/', array('as' => 'RegistrarUsuario', 'uses' => 'IndiceController@RegistrarUsuario'));

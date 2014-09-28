@@ -25,10 +25,16 @@
                 <div class="body bg-gray">
                     <div class="form-group">
                         {{ Form::text('txtNomUsuario', '', array('class' => 'form-control', 'placeholder' => 'Nombre de usuario')) }}
+                        <span class="text-red"> {{ $errors->first('txtNomUsuario') }} </span>
                     </div>
                     <div class="form-group">
                         {{ Form::password('txtContrasenha', array('class' => 'form-control', 'placeholder' => 'Contraseña')) }}
+                        <span class="text-red"> {{ $errors->first('txtContrasenha') }} </span>
                     </div>
+                    
+                    @if(Session::has('mensaje_error'))
+                        <span class="text-red"> {{ Session::get('mensaje_error') }} </span>
+                    @endif
                 </div>
                 <div class="footer">
                     {{ Form::submit('Ingresar', array('class' => 'btn bg-olive btn-block')) }}

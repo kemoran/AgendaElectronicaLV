@@ -2,7 +2,7 @@
 <html class="bg-black">
 	<head>
 		<meta charset="UTF-8">
-		<title> Acceso al sistema </title>
+		<title> Agenda electronica en Laravel 4 </title>
 		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 		{{ HTML::style('css/bootstrap.min.css') }}
 		{{ HTML::style('css/font-awesome.min.css') }}
@@ -32,11 +32,14 @@
                 </div>
                 <div class="footer">
                     {{ Form::submit('Ingresar', array('class' => 'btn bg-olive btn-block')) }}
-                    {{ HTML::linkRoute('OlvidarContrasenha', 'Olvidé mi contraseña', array(), array()) }}
+                    <p>
+                        {{ HTML::linkRoute('OlvidarContrasenha', 'Olvidé mi contraseña', array(), array()) }}
+                    </p>
                     {{ HTML::linkRoute('RegistrarUsuario', 'Registrarme', array(), array('class' => 'text-center')) }}
                 </div>
             {{ Form::close() }}
 
+                <!--
                 <div class="margin text-center">
                     <span> Ingresar usando una red social </span>
                     <br/>
@@ -44,6 +47,7 @@
                     <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
                     <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
                 </div>
+                -->
         </div>
 
 		<!-- jQuery 2.0.2 -->
